@@ -1,0 +1,10 @@
+# tox working folder
+/.tox
+
+# packaging folders
+/src/tox.egg-info
+src.egg-info
+
+# tools
+/.pytest_cache
+*__pycache__
