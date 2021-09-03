@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 NAME = 'init-tox'
 DESCRIPTION = 'Introduction to the tox automation tool and python packaging'
-URL = ''
+URL = 'https://github.com/albeertito7/init-tox'
 EMAIL = 'albertperezdatsira@gmail.com'
 AUTHOR = 'albeertito7'
 VERSION = '0.1.0'
