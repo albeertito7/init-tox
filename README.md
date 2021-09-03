@@ -23,7 +23,7 @@ On your python environment set the tox tool via `pip install tox`
 
 ## Config
 
-$ tox --showconfig
+    $ tox --showconfig
 
 Shows basically the objects (environments) in the configuration.
 
@@ -31,7 +31,7 @@ Also will show up what kind of variables you might set when configuring an envir
 
 For seeing verbosity
 
-$ tox -vvvvvv
+    $ tox -vvvvvv
 
 first 3vs are for tox and the rest for pip
 
@@ -67,5 +67,4 @@ envlist -> key which environments the test will run
           -> list the commands you wanna use to test ur library/project and the dependencies that should be installed
 
 // tox will manage to setup the environment and install all the dependencies listed to be added
-
 // inside .tox will be created the virtual environments tested when running tox.ini (tox)
