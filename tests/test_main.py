@@ -12,12 +12,15 @@ and also inside searches for 'test_' again, thus, 'test_factorial' will be execu
 even classes are supported for structuring better the code
 """
 
+
 def test_factorial_recur():
-	# functional or unit testing
-	assert factorial_recur(4) == 24
+    # functional or unit testing
+    assert factorial_recur(4) == 24
+
 
 def test_factorial():
-	assert factorial(4) == 24
+    assert factorial(4) == 24
+
 
 def test_all_factorials():
-	assert factorial_recur(4) == factorial(4)
+    assert factorial_recur(4) == factorial(4)

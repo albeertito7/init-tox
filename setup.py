@@ -1,41 +1,41 @@
 import sys, os
 from setuptools import setup, find_packages
 
-NAME = 'init-tox'
-DESCRIPTION = 'Introduction to the tox automation tool and python packaging'
-URL = 'https://github.com/albeertito7/init-tox'
-EMAIL = 'albertperezdatsira@gmail.com'
-AUTHOR = 'albeertito7'
-VERSION = '0.1.0'
-REQUIRES_PYTHON = '>=3.6.0'
+NAME = "init-tox"
+DESCRIPTION = "Introduction to the tox automation tool and python packaging"
+URL = "https://github.com/albeertito7/init-tox"
+EMAIL = "albertperezdatsira@gmail.com"
+AUTHOR = "albeertito7"
+VERSION = "0.1.0"
+REQUIRES_PYTHON = ">=3.6.0"
 
-REQUIRED = [] # required packages for this module to be executed
-EXTRAS = {} # optional packages
+REQUIRED = []  # required packages for this module to be executed
+EXTRAS = {}  # optional packages
 
 # to work with absoulte paths
 PATH = os.path.abspath(os.path.dirname(__file__))
 
 # to extract the description from the README.md file
 try:
-    with open(os.path.join(PATH, "README.md"), 'r', encoding='utf-8') as f:
+    with open(os.path.join(PATH, "README.md"), "r", encoding="utf-8") as f:
         long_description = f.read()
 except FileNotFoundError:
     long_description = "init-tox"
 
 about = {}
-if 'VERSION' not in locals() or not VERSION:
+if "VERSION" not in locals() or not VERSION:
     try:
         with open(os.path.join(PATH, "src", "__version__.py")) as f:
             exec(f.read(), about)
     except FileNotFoundError:
-        about['__version__'] = '0.1.0' # default version
+        about["__version__"] = "0.1.0"  # default version
 else:
-    about['__version__'] = VERSION
+    about["__version__"] = VERSION
 
 # where the magic happens:
 setup(
-    name='src',
-    version=about['__version__'],
+    name="src",
+    version=about["__version__"],
     description=long_description,
     author=AUTHOR,
     author_email=EMAIL,
@@ -43,19 +43,19 @@ setup(
     python_requires=REQUIRES_PYTHON,
     packages=find_packages(exclude=["tests", "*.tests", "*.tests.*", "tests.*"]),
     # if your package is a single module, use this instead of 'packages':
-    #py_modules=['mypackage']
+    # py_modules=['mypackage']
     install_requires=REQUIRED,
     extras_require=EXTRAS,
     include_package_data=True,
-    license='MIT',
+    license="MIT",
     classifiers=[
         # Trove classifiers
         # Full list: https://pypi.org/pypi?%3Aaction=list_classifiers
-        'License :: OSI Approved :: MIT License',
-        'Programming Language :: Python',
-        'Programming Language :: Python :: 3'
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python",
+        "Programming Language :: Python :: 3",
     ]
-    #scripts=[] #for scripts
+    # scripts=[] #for scripts
 )
 
 """
