@@ -42,6 +42,18 @@ Run `tox` programmatically and attach a debugger to the process (see [tox develo
 If you dont set `envlist` it will run all environments by default.
 But you can specify which ones tox should run, listing them in that variable.
 
+
+to see the environments declared, the default and the additional
+
+    $ tox -av
+
+to recreate the environments inside .tox/
+
+    $ tox --recreate (tox -r (in short form))
+
+
+You can use subsitutions like {envpython} to refer specific tox variables
+
 ## setup.py
 Describes how our python code should be packaged.
 
@@ -68,3 +80,8 @@ envlist -> key which environments the test will run
 
 // tox will manage to setup the environment and install all the dependencies listed to be added
 // inside .tox will be created the virtual environments tested when running tox.ini (tox)
+
+
+## Linting: Black
+
+    $ tox -e black
